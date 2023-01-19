@@ -27,10 +27,7 @@ describe('Movie tickets tests', () => {
     });
 
     it.skip('Third test (should not book ticket chosen twice) - negative', async () => {
-        randomSeat = [Math.floor(Math.random() * seats.length)];
-        cy.log(randomSeat);
         cy.get(seats[4].seat).click();
-        cy.log(randomSeat);
         cy.get(seats[4].seat).click();
         cy.get(movie.accept).should('be.visible');
     });
