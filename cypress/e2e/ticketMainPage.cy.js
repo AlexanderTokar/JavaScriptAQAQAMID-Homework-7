@@ -1,8 +1,8 @@
-describe('Movie tickets tests', () => {
-    const movie = require('../fixtures/bookingData.json');
-    const seats = require('../fixtures/seats.json');
-    const days = require('../fixtures/days.json');
+const movie = require('../fixtures/bookingData.json');
+const seats = require('../fixtures/seats.json');
+const days = require('../fixtures/days.json');
 
+describe('Movie tickets tests', () => {
     let randomDay;
     let randomSeat;
 
