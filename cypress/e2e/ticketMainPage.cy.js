@@ -2,6 +2,14 @@ const movie = require('../fixtures/bookingData.json');
 const seats = require('../fixtures/seats.json');
 const days = require('../fixtures/days.json');
 
+describe('Main page', () => {
+    it.skip('Should open main page', async () => {
+        cy.visit(movie.address);
+        cy.get(movie.header).contains('Идём');
+        cy.get(days[0].day).should('be.visible');
+    });
+});
+
 describe('Movie tickets tests', () => {
     let randomDay;
     let randomSeat;
